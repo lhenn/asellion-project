@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+</head>
+<body>
+  <div id="app">
+    <h1>Products</h1>
+    <div>
+      <input type="text" placeholder="name" v-model="name"></input>
+      <input type="number" placeholder="price" v-model="price"></input>
+      <button class="btn" @click="addProduct">add product</button>
+    </div>
+    <table>
+      <tr>
+        <td>Product</td>
+        <td>Price (euro)</td>
+        <td>Last Updated</td>
+      <tr>
+      <tr v-for="product in products">
+        <td>{{product.name}}</td>
+        <td>{{product.price}}</td>
+        <td>{{product.lastUpdated}}</td>
+      </tr>
+    </table>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
